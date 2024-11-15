@@ -1,3 +1,10 @@
-res://mapa.tscn
 res://scenes/jogo.tscn
+res://scenes/jogo.gd
+res://canvas_layer.tscn
 res://scenes/character.tscn
+res://scenes/quebraveis.tscn
+res://scenes/RandomSprite.tscn
+res://scenes/UI/menu.tscn
+res://canvas_layer.gd
+res://scripts/quebraveis.gd
+res://scenes/coisas_pra_quebrar.gd

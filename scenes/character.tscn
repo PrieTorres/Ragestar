@@ -134,11 +134,6 @@ hframes = 6
 vframes = 10
 frame = 45
 
-[node name="AttackTimer" type="Timer" parent="."]
-process_callback = 0
-wait_time = 0.4
-one_shot = true
-
 [node name="Hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
@@ -151,6 +146,12 @@ libraries = {
 "": SubResource("AnimationLibrary_nmwa0")
 }
 
-[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -6
+limit_top = -226
+limit_right = 536
+limit_bottom = 194
+limit_smoothed = true
+
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="animation_finished" from="Animation" to="." method="_on_animation_animation_finished"]

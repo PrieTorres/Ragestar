@@ -7,6 +7,7 @@ var _move_speed: float = 128
 @export var _sprite2D: Sprite2D
 @export var _animation: AnimationPlayer
 @export var _hitbox: CollisionShape2D
+@export var _attack_area_collision: CollisionObject2D
 
 func _physics_process(delta: float) -> void:
 	_move()
@@ -43,3 +44,7 @@ func _animate():
 func _on_animation_animation_finished(_anim_name: StringName) -> void:
 	if _anim_name == "attack":
 		_can_attack = true
+
+func _on_hitbox_body_entered(_body: Node2D) -> void:
+	if _body is Quebraveis:
+		_body.update_health([1,5])

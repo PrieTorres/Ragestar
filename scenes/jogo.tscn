@@ -1,17 +1,414 @@
-[gd_scene load_steps=4 format=3 uid="uid://6bc2768p58nv"]
+[gd_scene load_steps=8 format=3 uid="uid://6bc2768p58nv"]
 
 [ext_resource type="PackedScene" uid="uid://cnka2yt75d53q" path="res://scenes/character.tscn" id="1_ahi35"]
-[ext_resource type="PackedScene" uid="uid://d25wmgutp3u6p" path="res://mapa.tscn" id="1_gc6xt"]
+[ext_resource type="PackedScene" uid="uid://d25wmgutp3u6p" path="res://scenes/mapa.tscn" id="1_gc6xt"]
+[ext_resource type="Script" path="res://scenes/jogo.gd" id="1_unk10"]
+[ext_resource type="PackedScene" uid="uid://tssj20b2ekjk" path="res://scenes/quebraveis.tscn" id="3_riaps"]
+[ext_resource type="Script" path="res://scenes/coisas_pra_quebrar.gd" id="4_b8spy"]
+[ext_resource type="PackedScene" uid="uid://bskpa1piujpoe" path="res://canvas_layer.tscn" id="5_qiaeg"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_2e1ow"]
 
 [node name="Jogo" type="Node2D"]
+script = ExtResource("1_unk10")
 
 [node name="mapa" parent="." instance=ExtResource("1_gc6xt")]
 
 [node name="Character" parent="." instance=ExtResource("1_ahi35")]
-position = Vector2(105, 79)
+z_index = 1
+position = Vector2(168, 32)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Character"]
 shape = SubResource("SegmentShape2D_2e1ow")
 disabled = true
+
+[node name="CoisasParaQuebrar" type="Node2D" parent="."]
+script = ExtResource("4_b8spy")
+
+[node name="Computadores1" type="Node2D" parent="CoisasParaQuebrar"]
+
+[node name="Quebraveis" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(24, 56)
+
+[node name="Quebraveis2" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(48, 56)
+
+[node name="Quebraveis3" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(72, 56)
+
+[node name="Quebraveis4" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(96, 56)
+
+[node name="Quebraveis5" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(120, 56)
+
+[node name="Quebraveis6" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(120, 88)
+
+[node name="Quebraveis7" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(96, 88)
+
+[node name="Quebraveis8" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(72, 88)
+
+[node name="Quebraveis9" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(48, 88)
+
+[node name="Quebraveis10" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(24, 88)
+
+[node name="Quebraveis11" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(24, 120)
+
+[node name="Quebraveis12" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(48, 120)
+
+[node name="Quebraveis13" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(72, 120)
+
+[node name="Quebraveis14" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(96, 120)
+
+[node name="Quebraveis15" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(120, 120)
+
+[node name="Quebraveis16" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(120, 152)
+
+[node name="Quebraveis17" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(96, 152)
+
+[node name="Quebraveis18" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(72, 152)
+
+[node name="Quebraveis19" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(48, 152)
+
+[node name="Quebraveis20" parent="CoisasParaQuebrar/Computadores1" instance=ExtResource("3_riaps")]
+position = Vector2(24, 152)
+
+[node name="Computadores2" type="Node2D" parent="CoisasParaQuebrar"]
+position = Vector2(192, 0)
+
+[node name="Quebraveis" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(24, 56)
+
+[node name="Quebraveis2" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(48, 56)
+
+[node name="Quebraveis3" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(72, 56)
+
+[node name="Quebraveis4" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(96, 56)
+
+[node name="Quebraveis5" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(120, 56)
+
+[node name="Quebraveis6" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(120, 88)
+
+[node name="Quebraveis7" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(96, 88)
+
+[node name="Quebraveis8" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(72, 88)
+
+[node name="Quebraveis9" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(48, 88)
+
+[node name="Quebraveis10" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(24, 88)
+
+[node name="Quebraveis11" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(24, 120)
+
+[node name="Quebraveis12" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(48, 120)
+
+[node name="Quebraveis13" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(72, 120)
+
+[node name="Quebraveis14" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(96, 120)
+
+[node name="Quebraveis15" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(120, 120)
+
+[node name="Quebraveis16" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(120, 152)
+
+[node name="Quebraveis17" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(96, 152)
+
+[node name="Quebraveis18" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(72, 152)
+
+[node name="Quebraveis19" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(48, 152)
+
+[node name="Quebraveis20" parent="CoisasParaQuebrar/Computadores2" instance=ExtResource("3_riaps")]
+position = Vector2(24, 152)
+
+[node name="Computadores3" type="Node2D" parent="CoisasParaQuebrar"]
+position = Vector2(384, 0)
+
+[node name="Quebraveis" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(24, 56)
+
+[node name="Quebraveis2" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(48, 56)
+
+[node name="Quebraveis3" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(72, 56)
+
+[node name="Quebraveis4" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(96, 56)
+
+[node name="Quebraveis5" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(120, 56)
+
+[node name="Quebraveis6" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(120, 88)
+
+[node name="Quebraveis7" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(96, 88)
+
+[node name="Quebraveis8" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(72, 88)
+
+[node name="Quebraveis9" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(48, 88)
+
+[node name="Quebraveis10" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(24, 88)
+
+[node name="Quebraveis11" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(24, 120)
+
+[node name="Quebraveis12" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(48, 120)
+
+[node name="Quebraveis13" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(72, 120)
+
+[node name="Quebraveis14" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(96, 120)
+
+[node name="Quebraveis15" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(120, 120)
+
+[node name="Quebraveis16" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(120, 152)
+
+[node name="Quebraveis17" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(96, 152)
+
+[node name="Quebraveis18" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(72, 152)
+
+[node name="Quebraveis19" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(48, 152)
+
+[node name="Quebraveis20" parent="CoisasParaQuebrar/Computadores3" instance=ExtResource("3_riaps")]
+position = Vector2(24, 152)
+
+[node name="Computadores4" type="Node2D" parent="CoisasParaQuebrar"]
+position = Vector2(0, -168)
+
+[node name="Quebraveis" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(24, 56)
+
+[node name="Quebraveis2" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(48, 56)
+
+[node name="Quebraveis3" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(72, 56)
+
+[node name="Quebraveis4" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(96, 56)
+
+[node name="Quebraveis5" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(120, 56)
+
+[node name="Quebraveis6" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(120, 88)
+
+[node name="Quebraveis7" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(96, 88)
+
+[node name="Quebraveis8" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(72, 88)
+
+[node name="Quebraveis9" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(48, 88)
+
+[node name="Quebraveis10" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(24, 88)
+
+[node name="Quebraveis11" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(24, 120)
+
+[node name="Quebraveis12" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(48, 120)
+
+[node name="Quebraveis13" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(72, 120)
+
+[node name="Quebraveis14" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(96, 120)
+
+[node name="Quebraveis15" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(120, 120)
+
+[node name="Quebraveis16" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(120, 152)
+
+[node name="Quebraveis17" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(96, 152)
+
+[node name="Quebraveis18" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(72, 152)
+
+[node name="Quebraveis19" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(48, 152)
+
+[node name="Quebraveis20" parent="CoisasParaQuebrar/Computadores4" instance=ExtResource("3_riaps")]
+position = Vector2(24, 152)
+
+[node name="Computadores5" type="Node2D" parent="CoisasParaQuebrar"]
+position = Vector2(192, -168)
+
+[node name="Quebraveis" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(24, 56)
+
+[node name="Quebraveis2" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(48, 56)
+
+[node name="Quebraveis3" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(72, 56)
+
+[node name="Quebraveis4" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(96, 56)
+
+[node name="Quebraveis5" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(120, 56)
+
+[node name="Quebraveis6" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(120, 88)
+
+[node name="Quebraveis7" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(96, 88)
+
+[node name="Quebraveis8" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(72, 88)
+
+[node name="Quebraveis9" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(48, 88)
+
+[node name="Quebraveis10" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(24, 88)
+
+[node name="Quebraveis11" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(24, 120)
+
+[node name="Quebraveis12" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(48, 120)
+
+[node name="Quebraveis13" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(72, 120)
+
+[node name="Quebraveis14" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(96, 120)
+
+[node name="Quebraveis15" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(120, 120)
+
+[node name="Quebraveis16" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(120, 152)
+
+[node name="Quebraveis17" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(96, 152)
+
+[node name="Quebraveis18" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(72, 152)
+
+[node name="Quebraveis19" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(48, 152)
+
+[node name="Quebraveis20" parent="CoisasParaQuebrar/Computadores5" instance=ExtResource("3_riaps")]
+position = Vector2(24, 152)
+
+[node name="Computadores6" type="Node2D" parent="CoisasParaQuebrar"]
+position = Vector2(384, -168)
+
+[node name="Quebraveis" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(24, 56)
+
+[node name="Quebraveis2" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(48, 56)
+
+[node name="Quebraveis3" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(72, 56)
+
+[node name="Quebraveis4" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(96, 56)
+
+[node name="Quebraveis5" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(120, 56)
+
+[node name="Quebraveis6" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(120, 88)
+
+[node name="Quebraveis7" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(96, 88)
+
+[node name="Quebraveis8" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(72, 88)
+
+[node name="Quebraveis9" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(48, 88)
+
+[node name="Quebraveis10" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(24, 88)
+
+[node name="Quebraveis11" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(24, 120)
+
+[node name="Quebraveis12" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(48, 120)
+
+[node name="Quebraveis13" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(72, 120)
+
+[node name="Quebraveis14" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(96, 120)
+
+[node name="Quebraveis15" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(120, 120)
+
+[node name="Quebraveis16" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(120, 152)
+
+[node name="Quebraveis17" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(96, 152)
+
+[node name="Quebraveis18" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(72, 152)
+
+[node name="Quebraveis19" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(48, 152)
+
+[node name="Quebraveis20" parent="CoisasParaQuebrar/Computadores6" instance=ExtResource("3_riaps")]
+position = Vector2(24, 152)
+
+[node name="TempoLimite" type="Timer" parent="."]
+
+[node name="StartTimer" type="Timer" parent="."]
+
+[node name="contador" parent="." instance=ExtResource("5_qiaeg")]
+
+[connection signal="item_quebrado" from="." to="." method="_on_item_quebrado"]
+[connection signal="just_broken" from="CoisasParaQuebrar" to="." method="_on_coisas_pra_quebrar_just_broken"]
+[connection signal="timeout" from="TempoLimite" to="." method="_on_tempo_limite_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
