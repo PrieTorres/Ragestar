@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://tssj20b2ekjk"]
+
+[ext_resource type="Script" path="res://scripts/quebraveis.gd" id="1_rr73d"]
+[ext_resource type="PackedScene" uid="uid://bba7jl8x0h1e2" path="res://scenes/RandomSprite.tscn" id="2_cgkdx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vjc8l"]
+size = Vector2(24, 23)
+
+[node name="Quebraveis" type="StaticBody2D"]
+script = ExtResource("1_rr73d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+show_behind_parent = true
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_vjc8l")
+
+[node name="random_sprite" parent="." instance=ExtResource("2_cgkdx")]

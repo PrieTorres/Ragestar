@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://bskpa1piujpoe"]
+
+[ext_resource type="Script" path="res://canvas_layer.gd" id="1_vihem"]
+
+[node name="contador" type="CanvasLayer"]
+script = ExtResource("1_vihem")
+
+[node name="Relogio" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -12.0
+offset_right = 12.0
+offset_bottom = 58.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 42
+text = "0"
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 288.0
+offset_top = 8.0
+offset_right = 300.0
+offset_bottom = 36.0
+theme_override_font_sizes/font_size = 20
+text = "0"
